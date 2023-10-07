@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="firstDiv" id="loginContainer"> 
+            <div id="header">
+                <p>CIBIL Calculator</p>
+                <h1>Calculate your CIBIL Score.</h1>
+                <h1>Calculate your Max Loan.</h1>
+                <h1>Loan Approval.</h1>
+            </div>
+            <div class="formBox">
+                <div class="buttonBox">
+                    <div id="btn"></div>
+                    <button type="button" class="toggleBtn" onclick="login()">Log In</button>
+                    <button type="button" class="toggleBtn" onclick="register()">Register</button>
+                </div>
+                <div class="socialMedia">
+                    <img src="picture/fb.png" alt="fb-icon"/>
+                    <img src="picture/tw.png" alt="witer-icon"/>
+                    <img src="picture/gp.png" alt="google-icon"/>
+                </div>
+                <form id="login" action="login.php" method="post" class="inputGrp">
+                    <input name="email-Id" type="text" class="inputField" placeholder="User Id" required>
+                    <input name="password" type="password" class="inputField" placeholder="Enter Password" required>
+                    <div><input type="checkbox" class="checkBox" id="remPass"><label for="remPass">Remember Password</label></div>
+                    <button class="submitBtn" type="submit">Log In</button>
+                </form>
+                <form id="register" action="register.php" method="post" class="inputGrp">
+                    <input type="text" name="userId"class="inputField" placeholder="User Id" required>
+                    <input type="email" name="email-Id"class="inputField" placeholder="Email Id" required>
+                    <input type="password" name="password" class="inputField" placeholder="Enter Password" required>
+                    <div><input type="checkbox" class="checkBox" id="agree" required><label for="agree">I agreed to the terms & condition</label></div>
+                    <button class="submitBtn" type="submit">Register</button>
+                </form>                
+            </div>            
+        </div>
+        <script>
+            var x=document.getElementById("login");
+            var y=document.getElementById("register");
+            var z=document.getElementById("btn");
+            
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+            function login()
+            {
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>
+    </body>
+</html>
